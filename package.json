@@ -23,7 +23,6 @@
     "jest-cli": "^0.6.1"
   },
   "dependencies": {
-    "is-object": "^1.0.1",
     "lodash.isarray": "^3.0.4",
     "lodash.isobject": "^3.0.2"
   },
