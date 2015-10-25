@@ -1,32 +1,13 @@
-import isObject from 'is-object';
-import random from './helpers/randomize-array.js';
+var isObject = require('lodash.isobject');
+var isArray = require('lodash.isarray');
+var random = require('./helpers/randomize-array.js');
 
-export default iterable => {
-    let entries;
-    let ret;
+module.exports = function(iterable) {
+    var entries;
+    var ret;
 
     switch (true) {
-        case iterable instanceof Map:
-            ret = new Map();
-            entries = random(Array.from(iterable.entries()));
-
-            for (let entry of entries) {
-                ret.set(...entry);
-            }
-
-            break;
-
-        case iterable instanceof Set:
-            ret = new Set();
-            entries = random(Array.from(iterable.entries()));
-
-            for (let entry of entries) {
-                ret.add(...entry);
-            }
-
-            break;
-
-        case Array.isArray(iterable):
+        case isArray(iterable):
             ret = random(iterable.slice());
 
             break;
@@ -35,8 +16,8 @@ export default iterable => {
             ret = {};
             entries = random(Object.keys(iterable));
 
-            for (let entry of entries) {
-                ret[entry] = iterable[entry];
+            for (var i = 0; i < entries.length; i++) {
+                ret[i] = iterable[i];
             }
 
             break;

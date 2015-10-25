@@ -23,9 +23,14 @@
     "jest-cli": "^0.6.1"
   },
   "dependencies": {
-    "is-object": "^1.0.1"
+    "is-object": "^1.0.1",
+    "lodash.isarray": "^3.0.4",
+    "lodash.isobject": "^3.0.2"
   },
   "jest": {
-    "scriptPreprocessor": "<rootDir>/node_modules/babel-jest"
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/lodash.isarray",
+      "<rootDir>/node_modules/lodash.isobject"
+    ]
   }
 }
