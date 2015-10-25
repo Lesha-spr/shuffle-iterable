@@ -14,7 +14,7 @@ npm install shuffle-iterable
 var shuffle = require('shuffle-iterable');
 
 let obj = {a: 5, b: 10, c: 15};
-shuffle(obj);
+shuffle(obj); // new object randomly shuffled by obj keys;
 
 let arr = [3, 5, 9];
 shuffle(arr);
