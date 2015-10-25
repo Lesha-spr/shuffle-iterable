@@ -1,10 +1,10 @@
 {
   "name": "shuffle-iterable",
-  "version": "0.0.2a",
+  "version": "0.0.3",
   "description": "shuffles iterable",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -20,14 +20,12 @@
   },
   "homepage": "https://github.com/Lesha-spr/shuffle-iterable#readme",
   "devDependencies": {
-    "babelify": "^6.4.0",
-    "browserify": "^11.2.0",
-    "gulp": "^3.9.0",
-    "gulp-util": "^3.0.7",
-    "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0"
+    "jest-cli": "^0.6.1"
   },
   "dependencies": {
     "is-object": "^1.0.1"
+  },
+  "jest": {
+    "scriptPreprocessor": "<rootDir>/node_modules/babel-jest"
   }
 }
