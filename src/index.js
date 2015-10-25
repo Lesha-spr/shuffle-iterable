@@ -7,7 +7,6 @@ let random = arr => {
 };
 
 export default iterable => {
-    let length;
     let entries;
     let ret;
 
@@ -15,7 +14,6 @@ export default iterable => {
         case iterable instanceof Map:
             ret = new Map();
             entries = random(Array.from(iterable.entries()));
-            length = iterable.size;
 
             for (let entry of entries) {
                 ret.set(...entry);
