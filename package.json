@@ -1,6 +1,6 @@
 {
   "name": "shuffle-iterable",
-  "version": "0.0.2",
+  "version": "0.0.2a",
   "description": "shuffles iterable",
   "main": "index.js",
   "scripts": {

@@ -27,7 +27,6 @@ var random = function random(arr) {
 };
 
 exports['default'] = function (iterable) {
-    var length = undefined;
     var entries = undefined;
     var ret = undefined;
 
@@ -35,7 +34,6 @@ exports['default'] = function (iterable) {
         case iterable instanceof Map:
             ret = new Map();
             entries = random(Array.from(iterable.entries()));
-            length = iterable.size;
 
             var _iteratorNormalCompletion = true;
             var _didIteratorError = false;
@@ -69,7 +67,6 @@ exports['default'] = function (iterable) {
         case iterable instanceof Set:
             ret = new Set();
             entries = random(Array.from(iterable.entries()));
-            length = iterable.size;
 
             var _iteratorNormalCompletion2 = true;
             var _didIteratorError2 = false;

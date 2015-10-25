@@ -24,7 +24,6 @@ export default iterable => {
         case iterable instanceof Set:
             ret = new Set();
             entries = random(Array.from(iterable.entries()));
-            length = iterable.size;
 
             for (let entry of entries) {
                 ret.add(...entry);
